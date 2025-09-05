@@ -16,13 +16,16 @@ function Home(){
                        className = {`info  ${ activetab==="info" ? "activetab" : ""}`} onClick = {()=>setactivetab("info")}
                        >
                         <span>info</span>
-                        <div className = "details">
+                                  <div className = "details">
 
     <button>1.info</button>
     <button>2.info</button>
-</div>
+    </div>
+      
                     </button>
-                    <button className={activetab==="home" ? "activetab" : ""} onClick= {() => setactivetab("about")}
+            
+
+                 <button className={activetab==="home" ? "activetab" : ""} onClick= {() => setactivetab("about")}
                     >
                         About
 
