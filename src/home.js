@@ -6,6 +6,8 @@ function Home(){
 
   const [activetab,setactivetab] = useState("info");
 
+  
+
     return(
 
         <div>

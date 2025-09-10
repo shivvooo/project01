@@ -1,31 +1,28 @@
 import React,{useState,useRef} from 'react';
+import Subinfo from "./subinfo";
 
 function Info(){
-
-      let [product,setproduct] = useState({veggies:"",milk:"",meat:""})
+let [product,setproduct] = useState({veggies:"",milk:"",meat:""});
+      
       const divRef = useRef(null);
       if (divRef.current) {
       divRef.current.style.backgroundColor = "lightblue";
     divRef.current.style.width = "100%";
     divRef.current.style.padding = "30px";  
     }
-  product = [{
 
-    veggies: "carrot",
-    milk: "1ltr",
-    meat: "chicken"
-  },
-   {
-    veggies:"beets",
-    milk: "1/2 ltr",
-    meat:"fish"
-   }
-]
+    product = [{
+
+        veggies: "carrot",
+        milk: "1 ltr",
+        meat:"chicken"
+    }]
+  
     return (
 
         <div>
             <div ref = {divRef}>
-<table border="1">
+<table className = "table table-bordered table-striped w-50">
     <thead>
         <tr>
         <th>veggies</th>
@@ -52,6 +49,15 @@ function Info(){
 </table>
 
         </div>
+    <Subinfo product = {product} />
+    <div className = "frame border-dark p-2 bg-danger mh-100 mw-100 d-flex" style={{height : "300px" , width: "300px"}}>
+        <iframe
+            src = "http://localhost:3000/"
+            title = "page"
+            className = "w-5 h-5"
+
+        />
+    </div>
     </div>
     )
 }

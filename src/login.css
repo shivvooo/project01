@@ -113,3 +113,7 @@ border:1px solid grey;
     max-width:200px;
     padding:10px;
 }
+.frame{
+    padding:100px;
+    width: 300px;
+}
